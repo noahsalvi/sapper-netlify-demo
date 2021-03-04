@@ -9,7 +9,7 @@ const dev = NODE_ENV === "development";
 const server = express() // You can also use Express
   .use(
     compression({ threshold: 0 }),
-    sirv("static", { dev }),
+
     sapper.middleware()
   );
 if (dev) {
