@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper build; cp -R __sapper__/ functions/noah/__sapper__/; cp _redirects functions/noah/__sapper__;  node test; cp -a static/. __sapper__/build/",
+    "build": "rm -rf functions/noah/__sapper__; sapper build;  cp -R __sapper__/ functions/noah/__sapper__/; cp _redirects __sapper__/build;  node test; cp -a static/. __sapper__/build/",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
     "build-netlify": "yarn build; mv __sapper__/build/server/server.js __sapper__/build/server/server.mjs; yarn lambda",
