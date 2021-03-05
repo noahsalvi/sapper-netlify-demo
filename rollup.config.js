@@ -94,6 +94,7 @@ export default {
       }),
       svelte({
         compilerOptions: {
+          format: "cjs",
           dev,
           generate: "ssr",
           hydratable: true,
