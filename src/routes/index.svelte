@@ -1,50 +1,69 @@
-<script>
-	import successkid from 'images/successkid.jpg';
+<script context="module">
+  import { sotion } from "sotion";
+
+  export async function preload() {
+    const meta = await sotion.getScope();
+    return { meta };
+  }
 </script>
 
-<style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
-</style>
+<script lang="ts">
+  export let meta: Object;
+  const slugArray = Object.values(meta);
+</script>
 
 <svelte:head>
-	<title>Sapper project template</title>
+  <title>Noahs Sapper-Notion Demo</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Sapper Notion Demo!</h1>
+<div class="sites">
+  {#each slugArray as slug}
+    <a href={slug.slug}>{slug.Page}</a>
+  {/each}
+</div>
 
-<figure>
-	<img alt="Success Kid" src="{successkid}">
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
+<br />
+<br />
+<br />
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+Source:
+<a
+  href="https://www.notion.so/ae6b5c6a74d048f0b646dad06ba319d8?v=0e7ea8a3a0f24722864fe3122f1f750e"
+>
+  https://www.notion.so/ae6b5c6a74d048f0b646dad06ba319d8?v=0e7ea8a3a0f24722864fe3122f1f750e
+</a>
+
+<style>
+  h1 {
+    margin-top: 50px;
+  }
+  .sites {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .sites a {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 150px;
+    background: rgb(50, 50, 50);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+    padding: 15px 8px;
+    border-radius: 5px;
+    text-decoration: 0;
+    margin-right: 5px;
+  }
+
+  .sites a:hover {
+    background-color: rgb(67, 67, 67);
+  }
+
+  .sites a :last-child {
+    margin-right: 0;
+  }
+</style>

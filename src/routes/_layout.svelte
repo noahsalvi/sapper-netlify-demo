@@ -1,22 +1,9 @@
-<script>
-	import Nav from '../components/Nav.svelte';
+<script context="module">
+  import { sotion } from "sotion";
 
-	export let segment;
+  export function preload() {
+    sotion.setFetch(this.fetch).setScope("ae6b5c6a74d048f0b646dad06ba319d8");
+  }
 </script>
 
-<style>
-	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-</style>
-
-<Nav {segment}/>
-
-<main>
-	<slot></slot>
-</main>
+<slot />

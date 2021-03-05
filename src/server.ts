@@ -15,9 +15,7 @@ if (dev) {
 server.use(sapper.middleware());
 
 if (dev) {
-  server.listen(PORT, (err) => {
-    if (err) console.log("error", err);
-  });
+  server.listen(PORT);
 }
 
 module.exports = server;
