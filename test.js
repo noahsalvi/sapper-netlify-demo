@@ -6,7 +6,7 @@ fs.readFile(fileName, "utf8", function (err, data) {
   }
   var result = data.replace(
     `"__sapper__/build"`,
-    `path.join(__dirname + "..")`
+    `path.join(__dirname + "/..")`
   );
 
   fs.writeFile(fileName, result, "utf8", function (err) {
