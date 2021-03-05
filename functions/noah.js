@@ -8,8 +8,8 @@ let output = execSync("pwd", { encoding: "utf-8" }); // the default is 'buffer'
 console.log("ls:\n", output);
 
 console.log("Starting server on port " + process.env.PORT);
+require("../__sapper__/build/build.json");
+require("../__sapper__/build/template.html");
 const serverless = require("serverless-http");
-const json = require("../__sapper__/build/build.json");
-console.log(!!json);
 const server = require("../__sapper__/build/server/server");
 module.exports.handler = serverless(server);
