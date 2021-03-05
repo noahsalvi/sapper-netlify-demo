@@ -4,13 +4,16 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper build; node test",
+    "build": "sapper build; cp -R __sapper__ functions/noah/__sapper__",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
     "build-netlify": "yarn build; mv __sapper__/build/server/server.js __sapper__/build/server/server.mjs; yarn lambda",
     "lambda": "netlify-lambda build pureFunctions",
     "zip": "zip-it-and-ship-it functions output"
   },
+  "files": [
+    "__sapper__/build/template.html"
+  ],
   "dependencies": {
     "compression": "^1.7.1",
     "encoding": "latest",
