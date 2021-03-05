@@ -8,7 +8,8 @@
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
     "build-netlify": "yarn build; mv __sapper__/build/server/server.js __sapper__/build/server/server.mjs; yarn lambda",
-    "lambda": "netlify-lambda build pureFunctions"
+    "lambda": "netlify-lambda build pureFunctions",
+    "zip": "zip-it-and-ship-it functions output"
   },
   "dependencies": {
     "compression": "^1.7.1",
