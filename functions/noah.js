@@ -6,6 +6,7 @@ const execSync = require("child_process").execSync;
 // import { execSync } from 'child_process';  // replace ^ if using ES modules
 let output = execSync("ls ./src", { encoding: "utf-8" }); // the default is 'buffer'
 console.log("ls:\n", output);
+console.log(process.cwd());
 
 console.log("Starting server on port " + process.env.PORT);
 const serverless = require("serverless-http");
