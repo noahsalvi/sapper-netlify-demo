@@ -11,9 +11,6 @@
     "lambda": "netlify-lambda build pureFunctions",
     "zip": "zip-it-and-ship-it functions output"
   },
-  "files": [
-    "__sapper__/build/template.html"
-  ],
   "dependencies": {
     "compression": "^1.7.1",
     "encoding": "latest",

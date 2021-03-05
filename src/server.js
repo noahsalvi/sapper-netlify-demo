@@ -9,10 +9,10 @@ const dev = NODE_ENV === "development";
 const server = express() // You can also use Express
   .use(
     compression({ threshold: 0 }),
-    // sirv("static", { dev }),
+    sirv("static", { dev }),
     sapper.middleware()
   );
-if (dev) {
+if (true) {
   server.listen(PORT, (err) => {
     if (err) console.log("error", err);
   });
