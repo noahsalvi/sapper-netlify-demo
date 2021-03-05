@@ -1,13 +1,8 @@
 "use strict";
 process.env.NODE_ENV = process.env.NODE_ENV || "production";
-process.env.PORT = process.env.PORT || 443;
-
-const execSync = require("child_process").execSync;
-// import { execSync } from 'child_process';  // replace ^ if using ES modules
-let output = execSync("pwd", { encoding: "utf-8" }); // the default is 'buffer'
-console.log("ls:\n", output);
+process.env.PORT = process.env.PORT || 3000;
 
 console.log("Starting server on port " + process.env.PORT);
 const serverless = require("serverless-http");
 const server = require("./__sapper__/build/server/server");
-module.exports.handler = server;
+module.exports.handler = serverless(server);
