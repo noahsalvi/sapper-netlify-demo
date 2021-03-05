@@ -10,9 +10,8 @@ const server = express().use(compression({ threshold: 0 }));
 
 if (dev) {
   server.use(sirv("static", { dev }));
-} else {
-  server.use(sirv("src/functions/noah/static"));
 }
+
 server.use(sapper.middleware());
 
 if (dev) {

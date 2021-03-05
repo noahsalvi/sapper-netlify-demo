@@ -15,7 +15,6 @@
     "compression": "^1.7.1",
     "encoding": "latest",
     "express": "^4.17.1",
-    "polka": "next",
     "serverless-http": "^2.7.0",
     "sirv": "^1.0.0"
   },
