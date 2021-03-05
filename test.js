@@ -4,7 +4,7 @@ fs.readFile(fileName, "utf8", function (err, data) {
   if (err) {
     return console.log(err);
   }
-  console.log(process.cwd());
+  console.log(__dirname);
   var result = data.replace(`"__sapper__/build"`, `__dirname`);
 
   fs.writeFile(fileName, result, "utf8", function (err) {
