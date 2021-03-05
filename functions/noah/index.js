@@ -9,5 +9,5 @@ console.log("ls:\n", output);
 
 console.log("Starting server on port " + process.env.PORT);
 const serverless = require("serverless-http");
-const server = require("./__sapper__/build/");
+const server = require("./__sapper__/build/server/server");
 module.exports.handler = serverless(server);
