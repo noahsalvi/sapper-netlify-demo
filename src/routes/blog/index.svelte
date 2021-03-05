@@ -1,6 +1,6 @@
 <script context="module">
   export function preload() {
-    return this.fetch(`https://sapper-using-functions.netlify.app/blog.json`)
+    return this.fetch(`blogs.json`)
       .then((r) => r.json())
       .then((posts) => {
         return { posts };
