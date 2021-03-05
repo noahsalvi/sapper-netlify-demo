@@ -10,6 +10,6 @@ console.log("Output was:\n", output);
 
 console.log("Starting server on port " + process.env.PORT);
 const serverless = require("serverless-http");
-const server = require("../__sapper__/build/server/server");
+const server = require("../../__sapper__/build/server/server");
 console.log("running noah.js");
 module.exports.handler = serverless(server);
