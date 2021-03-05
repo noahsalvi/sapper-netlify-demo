@@ -8,11 +8,12 @@ const dev = NODE_ENV === "development";
 
 const server = express().use(
   compression({ threshold: 0 }),
+  sirv("src/functions/noah/static", { dev }),
   sapper.middleware()
 );
 
 if (dev) {
-  server.use(sirv("static", { dev })).listen(PORT, (err) => {
+  server.listen(PORT, (err) => {
     if (err) console.log("error", err);
   });
 }
