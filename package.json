@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper build",
+    "build": "sapper build; node test",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
     "build-netlify": "yarn build; mv __sapper__/build/server/server.js __sapper__/build/server/server.mjs; yarn lambda",

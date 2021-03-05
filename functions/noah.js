@@ -11,5 +11,5 @@ console.log("Starting server on port " + process.env.PORT);
 const serverless = require("serverless-http");
 const json = require("../__sapper__/build/build.json");
 console.log(!!json);
-const server = require("../__sapper__/build/");
+const server = require("../__sapper__/build/server/server");
 module.exports.handler = serverless(server);
