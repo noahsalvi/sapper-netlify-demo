@@ -5,7 +5,7 @@ process.env.PORT = process.env.PORT || 3000;
 const build_dir = "__sapper__/build";
 const execSync = require("child_process").execSync;
 // import { execSync } from 'child_process';  // replace ^ if using ES modules
-const output = execSync("cs ../../; ls", { encoding: "utf-8" }); // the default is 'buffer'
+const output = execSync("cd ../../; ls", { encoding: "utf-8" }); // the default is 'buffer'
 console.log("Output was:\n", output);
 
 console.log("Starting server on port " + process.env.PORT);
