@@ -4,9 +4,11 @@ fs.readFile(fileName, "utf8", function (err, data) {
   if (err) {
     return console.log(err);
   }
-  var result =
-    "console.log(process.cwd());\n" +
-    data.replace("__sapper__/build", "./__sapper__/build");
+  console.log(process.cwd());
+  var result = data.replace(
+    `"__sapper__/build"`,
+    `path.join(__dirname, "__sapper__/build")`
+  );
 
   fs.writeFile(fileName, result, "utf8", function (err) {
     if (err) return console.log(err);
