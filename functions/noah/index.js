@@ -1,6 +1,6 @@
 "use strict";
 process.env.NODE_ENV = process.env.NODE_ENV || "production";
-process.env.PORT = process.env.PORT || 3000;
+process.env.PORT = process.env.PORT || 443;
 
 const execSync = require("child_process").execSync;
 // import { execSync } from 'child_process';  // replace ^ if using ES modules
