@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@arr/every@^1.0.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@arr/every/-/every-1.0.1.tgz#22fe1f8e6355beca6c7c7bde965eb15cf994387b"
+  integrity sha512-UQFQ6SgyJ6LX42W8rHCs8KVc0JS0tzVL9ct4XYedJukskYVWTo49tNiMEK9C2HTyarbNiT/RVIRSY82vH+6sTg==
+
 "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13":
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.13.tgz#dcfc826beef65e75c50e21d3837d7d95798dd658"
@@ -835,6 +840,11 @@
     "@babel/helper-validator-identifier" "^7.12.11"
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
+
+"@polka/url@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@polka/url/-/url-0.5.0.tgz#b21510597fd601e5d7c95008b76bf0d254ebfd31"
+  integrity sha512-oZLYFEAzUKyi3SKnXvj32ZCEGH6RDnao7COuCVhDydMS9NrCSVXhM79VaKyP5+Zc33m0QXEd2DN3UkU7OsHcfw==
 
 "@polka/url@^1.0.0-next.9":
   version "1.0.0-next.11"
@@ -1779,6 +1789,13 @@ make-dir@^3.0.0:
   dependencies:
     semver "^6.0.0"
 
+matchit@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/matchit/-/matchit-1.1.0.tgz#c4ccf17d9c824cc1301edbcffde9b75a61d10a7c"
+  integrity sha512-+nGYoOlfHmxe5BW5tE0EMJppXEwdSf8uBA1GTZC7Q77kbT35+VKLYJMzVNWCHSsga1ps1tPYFtFyvxvKzWVmMA==
+  dependencies:
+    "@arr/every" "^1.0.0"
+
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
@@ -1947,6 +1964,14 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"
   integrity sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg==
+
+polka@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/polka/-/polka-0.5.2.tgz#588bee0c5806dbc6c64958de3a1251860e9f2e26"
+  integrity sha512-FVg3vDmCqP80tOrs+OeNlgXYmFppTXdjD5E7I4ET1NjvtNmQrb1/mJibybKkb/d4NA7YWAr1ojxuhpL3FHqdlw==
+  dependencies:
+    "@polka/url" "^0.5.0"
+    trouter "^2.0.1"
 
 prismjs@^1.23.0:
   version "1.23.0"
@@ -2334,6 +2359,13 @@ totalist@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/totalist/-/totalist-1.1.0.tgz#a4d65a3e546517701e3e5c37a47a70ac97fe56df"
   integrity sha512-gduQwd1rOdDMGxFG1gEvhV88Oirdo2p+KjoYFU7k2g+i7n6AFFbDQ5kMPUsW0pNbfQsB/cwXvT1i4Bue0s9g5g==
+
+trouter@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/trouter/-/trouter-2.0.1.tgz#2726a5f8558e090d24c3a393f09eaab1df232df6"
+  integrity sha512-kr8SKKw94OI+xTGOkfsvwZQ8mWoikZDd2n8XZHjJVZUARZT+4/VV6cacRS6CLsH9bNm+HFIPU1Zx4CnNnb4qlQ==
+  dependencies:
+    matchit "^1.0.0"
 
 tslib@^2.0.1:
   version "2.1.0"
