@@ -1179,7 +1179,7 @@ chalk@^2.0.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chalk@^4.0.0:
+chalk@^4.0.0, chalk@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.0.tgz#4e14870a618d9e2edd97dd8345fd9d9dc315646a"
   integrity sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
@@ -2037,6 +2037,15 @@ svelte-preprocess@^4.0.0, svelte-preprocess@^4.3.0:
     detect-indent "^6.0.0"
     strip-indent "^3.0.0"
 
+svelte-windicss-preprocess@^3.0.0-beta.1:
+  version "3.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/svelte-windicss-preprocess/-/svelte-windicss-preprocess-3.0.0-beta.1.tgz#c167a128bcc1ed8e9d551da7dab5b4ef4320269c"
+  integrity sha512-91IQrqVNtKkFoiSOXW7ebFknXkUSZvPOTdHpWQiYd7keK8pzt6yu7QlAfPywy7MVJWLF1VxKRpBwIFOGl3DCcQ==
+  dependencies:
+    chalk "^4.1.0"
+    magic-string "^0.25.7"
+    windicss "^2.2.6"
+
 svelte@^3.17.3:
   version "3.35.0"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.35.0.tgz#e0d0ba60c4852181c2b4fd851194be6fda493e65"
@@ -2127,6 +2136,11 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+windicss@^2.2.6:
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/windicss/-/windicss-2.2.8.tgz#ed4bad66b3ac8b4fd5a6bf94cd3ac343a283ab31"
+  integrity sha512-zNh65NiuGDChJvCjkEEMpA5NpykouYOc5vGeT3ynC5XydbENJYCEP7Jt9cfVD9BAG+OQxsNYtsYOabtzQeq4Iw==
 
 wrappy@1:
   version "1.0.2"

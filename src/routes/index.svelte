@@ -8,16 +8,17 @@
 </script>
 
 <script lang="ts">
+  import Nav from "../components/Nav.svelte";
   export let meta: Object;
   const slugArray = Object.values(meta);
 </script>
 
 <svelte:head>
-  <title>Noahs Sapper-Notion Demo</title>
+  <title>Sapper-Notion Demo</title>
 </svelte:head>
 
 <h1>Sapper Notion Demo!</h1>
-<div class="sites">
+<div class="sites bg-purple-200 p-5">
   {#each slugArray as slug}
     <a href={slug.slug}>{slug.Page}</a>
   {/each}
@@ -35,6 +36,9 @@ Source:
 </a>
 
 <style>
+  /* :global(body) {
+    background: rgb(50, 50, 50);
+  } */
   h1 {
     margin-top: 50px;
   }
