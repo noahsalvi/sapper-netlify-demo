@@ -1,4 +1,4 @@
-<script context="module">
+<script context="module" lang="ts">
   import { sotion } from "sotion";
 
   export function preload() {
